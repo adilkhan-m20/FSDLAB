@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Translate Function</title>
+  </head>
+  <body>
+    <h3>Consonant Translator</h3>
+
+    <input type="text" id="inputText" placeholder="Enter text" />
+    <button onclick="runTranslate()">Translate</button>
+
+    <p><b>Output:</b> <span id="output"></span></p>
+
+    <script>
+      function translate(text) {
+        let vowels = "aeiouAEIOU";
+        let result = "";
+
+        for (let i = 0; i < text.length; i++) {
+          let ch = text[i];
+
+          if (ch.match(/[a-zA-Z]/) && !vowels.includes(ch)) {
+            result += ch + "o" + ch;
+          } else {
+            result += ch;
+          }
+        }
+        return result;
+      }
+
+      function runTranslate() {
+        let input = document.getElementById("inputText").value;
+        document.getElementById("output").innerText = translate(input);
+      }
+    </script>
+  </body>
+</html>

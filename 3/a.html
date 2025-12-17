@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Marks using Closure</title>
+  </head>
+  <body>
+    <h3>Student Academic Data</h3>
+
+    USN: <input type="text" id="usn" /><br /><br />
+    Subject Code: <input type="text" id="scode" /><br /><br />
+    Subject Name: <input type="text" id="sname" /><br /><br />
+    CIE Marks: <input type="number" id="cie" /><br /><br />
+    SEE Marks: <input type="number" id="see" /><br /><br />
+
+    <button onclick="showResult()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+      // Closure function
+      function studentData(usn, scode, sname, cie, see) {
+        let cieMarks = cie; // private
+        let seeMarks = see; // private
+
+        return {
+          getTotal: function () {
+            return cieMarks + seeMarks;
+          },
+          getDetails: function () {
+            return `
+          USN: ${usn}<br>
+          Subject Code: ${scode}<br>
+          Subject Name: ${sname}<br>
+          Total Marks: ${this.getTotal()}
+        `;
+          },
+        };
+      }
+
+      function showResult() {
+        const student = studentData(
+          document.getElementById("usn").value,
+          document.getElementById("scode").value,
+          document.getElementById("sname").value,
+          parseInt(document.getElementById("cie").value),
+          parseInt(document.getElementById("see").value)
+        );
+
+        document.getElementById("output").innerHTML = student.getDetails();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attendance Management</title>
+  </head>
+  <body>
+    <h2>Student Attendance Form</h2>
+
+    <form action="/insert" method="GET">
+      Student ID: <input type="text" name="sid" /><br /><br />
+      Name: <input type="text" name="name" /><br /><br />
+      Course: <input type="text" name="course" /><br /><br />
+      Total Classes: <input type="number" name="total" /><br /><br />
+      Classes Attended: <input type="number" name="attended" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h3>Students with Attendance Below 75%</h3>
+    <a href="/below75">View Students</a>
+  </body>
+</html>

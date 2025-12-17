@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Details</title>
+  </head>
+  <body>
+    <h2>Student Registration</h2>
+
+    <form action="/insert" method="GET">
+      User Name: <input type="text" name="username" /><br /><br />
+      Branch:
+      <select name="branch">
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>ME</option>
+        <option>CE</option></select
+      ><br /><br />
+      Semester: <input type="number" name="semester" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h3>View CSE Students (6th Semester)</h3>
+    <a href="/cse6">Show Students</a>
+  </body>
+</html>

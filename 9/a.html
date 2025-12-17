@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>notBad Function</title>
+  </head>
+  <body>
+    <h3>notBad String Function</h3>
+
+    <input
+      type="text"
+      id="inputText"
+      size="40"
+      placeholder="Enter a sentence"
+    />
+    <br /><br />
+
+    <button onclick="checkString()">Check</button>
+
+    <p id="output"></p>
+
+    <script>
+      function notBad(str) {
+        let notIndex = str.indexOf("not");
+        let badIndex = str.indexOf("bad");
+
+        if (notIndex !== -1 && badIndex !== -1 && badIndex > notIndex) {
+          return str.slice(0, notIndex) + "good" + str.slice(badIndex + 3);
+        }
+        return str;
+      }
+
+      function checkString() {
+        const text = document.getElementById("inputText").value;
+        document.getElementById("output").innerText = notBad(text);
+      }
+    </script>
+  </body>
+</html>

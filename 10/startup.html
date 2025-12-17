@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Startup Portal</title>
+  </head>
+  <body>
+    <h2>Submit Startup Idea</h2>
+
+    <form action="/insert" method="GET">
+      Startup ID: <input type="text" name="id" /><br /><br />
+      Team Name: <input type="text" name="team" /><br /><br />
+      Title: <input type="text" name="title" /><br /><br />
+      Domain:
+      <select name="domain">
+        <option>EdTech</option>
+        <option>FinTech</option>
+        <option>HealthTech</option>
+        <option>AgriTech</option></select
+      ><br /><br />
+      Funding Required (₹): <input type="number" name="funding" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h3>EdTech Startups needing Funding > ₹5 Lakhs</h3>
+    <a href="/edtech">View Startup Ideas</a>
+  </body>
+</html>

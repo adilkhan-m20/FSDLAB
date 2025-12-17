@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Records</title>
+  </head>
+  <body>
+    <h2>Add Student</h2>
+    <form action="/insert" method="GET">
+      Name: <input type="text" name="name" /><br /><br />
+      USN: <input type="text" name="usn" /><br /><br />
+      Department: <input type="text" name="dept" /><br /><br />
+      Grade: <input type="text" name="grade" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h2>Update Student Grade</h2>
+    <form action="/updateGrade" method="GET">
+      Student Name: <input type="text" name="name" /><br /><br />
+      New Grade: <input type="text" name="grade" /><br /><br />
+      <input type="submit" value="Update Grade" />
+    </form>
+
+    <hr />
+
+    <h2>View All Students</h2>
+    <a href="/view">Show Student Records</a>
+  </body>
+</html>

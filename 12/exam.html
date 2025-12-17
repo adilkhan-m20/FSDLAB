@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exam Management System</title>
+  </head>
+  <body>
+    <h2>Student Exam Details</h2>
+
+    <form action="/insert" method="GET">
+      Student ID: <input type="text" name="sid" /><br /><br />
+      Name: <input type="text" name="name" /><br /><br />
+      Subject: <input type="text" name="subject" /><br /><br />
+      Marks: <input type="number" name="marks" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h3>Students Not Eligible for Exam</h3>
+    <a href="/noteligible">View Not Eligible Students</a>
+  </body>
+</html>

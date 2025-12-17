@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Internship Tracking System</title>
+  </head>
+  <body>
+    <h2>Internship Details Form</h2>
+
+    <form action="/insert" method="GET">
+      Student ID: <input type="text" name="sid" /><br /><br />
+      Name: <input type="text" name="name" /><br /><br />
+      Company: <input type="text" name="company" /><br /><br />
+      Duration: <input type="text" name="duration" /><br /><br />
+      Status:
+      <input type="text" name="status" placeholder="Ongoing" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h3>Students Interning at Infosys</h3>
+    <a href="/infosys">View Infosys Interns</a>
+
+    <hr />
+
+    <h3>Mark Internship as Completed</h3>
+    <form action="/updateStatus" method="GET">
+      Internship ID: <input type="text" name="id" /><br /><br />
+      <input type="submit" value="Mark Completed" />
+    </form>
+  </body>
+</html>

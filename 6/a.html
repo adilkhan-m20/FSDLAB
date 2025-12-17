@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Name Update</title>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      class NameForm extends React.Component {
+        constructor() {
+          super();
+          this.state = { name: "" };
+        }
+
+        handleChange = (event) => {
+          this.setState({ name: event.target.value });
+        };
+
+        render() {
+          return (
+            <div>
+              <h3>Enter Name</h3>
+              <input type="text" onChange={this.handleChange} />
+              <h1>{this.state.name}</h1>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<NameForm />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

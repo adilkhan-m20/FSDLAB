@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Complaint Management</title>
+  </head>
+  <body>
+    <h2>Register Complaint</h2>
+    <form action="http://localhost:5000/addComplaint" method="GET">
+      User Name: <input type="text" name="username" /><br /><br />
+      Issue: <input type="text" name="issue" /><br /><br />
+      <input type="submit" value="Submit Complaint" />
+    </form>
+
+    <hr />
+
+    <h2>Update Complaint Status</h2>
+    <form action="http://localhost:5000/updateStatus" method="GET">
+      Complaint ID: <input type="text" name="id" /><br /><br />
+      Status:
+      <select name="status">
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Resolved</option></select
+      ><br /><br />
+      <input type="submit" value="Update Status" />
+    </form>
+
+    <hr />
+
+    <h2>View Pending Complaints</h2>
+    <a href="http://localhost:5000/pending">Show Pending Complaints</a>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Exam Fee</title>
+  </head>
+  <body>
+    <h2>Student Exam Fee Form</h2>
+
+    <form action="/insert" method="GET">
+      Student Name: <input type="text" name="name" /><br /><br />
+      USN: <input type="text" name="usn" /><br /><br />
+      Semester: <input type="text" name="semester" /><br /><br />
+      Exam Fee: <input type="number" name="fee" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h3>Delete Unpaid Students</h3>
+    <a href="/deleteUnpaid">Delete Students with Exam Fee = 0 or NULL</a>
+  </body>
+</html>

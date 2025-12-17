@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Course Enrollment</title>
+  </head>
+  <body>
+    <h2>Course Enrollment Form</h2>
+
+    <form action="/insert" method="GET">
+      Student ID: <input type="text" name="sid" /><br /><br />
+      Name: <input type="text" name="name" /><br /><br />
+      Course Name: <input type="text" name="course" /><br /><br />
+      Duration: <input type="text" name="duration" /><br /><br />
+      Status:
+      <input type="text" name="status" placeholder="active" /><br /><br />
+      <input type="submit" value="Enroll" />
+    </form>
+
+    <hr />
+
+    <h3>View Active Enrollments</h3>
+    <a href="/active">Show Active Enrollments</a>
+
+    <hr />
+
+    <h3>Update Enrollment Status (Completed)</h3>
+    <form action="/updateStatus" method="GET">
+      Student ID: <input type="text" name="sid" /><br /><br />
+      OR Course Name: <input type="text" name="course" /><br /><br />
+      <input type="submit" value="Mark Completed" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Management</title>
+  </head>
+  <body>
+    <h2>Add Product</h2>
+
+    <form action="/insert" method="GET">
+      Product ID: <input type="text" name="pid" /><br /><br />
+      Name: <input type="text" name="name" /><br /><br />
+      Price: <input type="number" name="price" /><br /><br />
+      Discount (%): <input type="number" name="discount" /><br /><br />
+      Stock: <input type="number" name="stock" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr />
+
+    <h3>Products with Final Price < ₹1000</h3>
+    <a href="/lowprice">View Products</a>
+  </body>
+</html>
