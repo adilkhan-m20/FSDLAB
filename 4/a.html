@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Employee Details</title>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      class Employee extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            name: "",
+            address: "",
+            company: "",
+            newName: "",
+            newAddress: "",
+          };
+        }
+
+        handleChange = (e) => {
+          this.setState({ [e.target.name]: e.target.value });
+        };
+
+        changeDetails = () => {
+          this.setState({
+            name: this.state.newName,
+            address: this.state.newAddress,
+          });
+        };
+
+        render() {
+          return (
+            <div>
+              <h3>Employee Details</h3>
+              <h4>Initial Details</h4>
+              Name:
+              <input type="text" name="name" onChange={this.handleChange} />
+              <br />
+              Address:
+              <input type="text" name="address" onChange={this.handleChange} />
+              <br />
+              Company:
+              <input type="text" name="company" onChange={this.handleChange} />
+              <br />
+              <br />
+              <h4>Changed Details</h4>
+              New Name:
+              <input type="text" name="newName" onChange={this.handleChange} />
+              <br />
+              New Address:
+              <input
+                type="text"
+                name="newAddress"
+                onChange={this.handleChange}
+              />
+              <br />
+              <br />
+              <button onClick={this.changeDetails}>CHANGE</button>
+              <hr />
+              <p>Name: {this.state.name}</p>
+              <p>Address: {this.state.address}</p>
+              <p>Company: {this.state.company}</p>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<Employee />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

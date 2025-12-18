@@ -9,7 +9,7 @@
     <input type="text" id="monthNum" placeholder="Enter month number" />
     <button onclick="showMonth()">Convert</button>
 
-    <p>Month Name: <input type="text" id="monthName" readonly /></p>
+    <p>Month Name: <span id="monthName"></span></p>
 
     <script>
       // Closure function
@@ -42,7 +42,7 @@
 
       function showMonth() {
         const input = document.getElementById("monthNum").value;
-        document.getElementById("monthName").value = getMonthName(
+        document.getElementById("monthName").innerHTML = getMonthName(
           Number(input)
         );
       }
